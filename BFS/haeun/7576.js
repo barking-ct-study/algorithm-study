@@ -22,7 +22,6 @@ const solution = () => {
     // 초기 토마토 모두 큐에 넣기기
     const queue = [];
     let head = 0;
-    let top = 0;
 
     for (let i = 0; i < N; i++) {
         for (let j = 0; j < M; j++) {
