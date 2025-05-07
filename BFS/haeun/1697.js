@@ -6,11 +6,10 @@ const input = () => {
 };
 
 const BFS = (sx, target) => {
-    const queue = [];
-    const dist = Array(100000 + 1).fill(Infinity);
+    const dist = Array(100001).fill(-1);
 
     // 수빈이의 위치
-    queue.push(sx);
+    const queue = [sx];
     dist[sx] = 0;
 
     while (queue.length) {
@@ -22,7 +21,7 @@ const BFS = (sx, target) => {
             //범위 벗어나는 경우 건너 뛰기
             if (nx < 0 || nx > 100000) continue;
 
-            if (dist[nx] > dist[cx] + 1) {
+            if (dist[nx] === -1) {
                 dist[nx] = dist[cx] + 1;
                 queue.push(nx);
             }
