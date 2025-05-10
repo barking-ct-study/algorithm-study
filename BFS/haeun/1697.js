@@ -24,11 +24,11 @@ const BFS = (sx, target) => {
             if (dist[nx] === -1) {
                 dist[nx] = dist[cx] + 1;
                 queue.push(nx);
+
+                if (nx === target) return dist[target];
             }
         }
     }
-
-    return dist[target];
 };
 
 const solution = () => {
