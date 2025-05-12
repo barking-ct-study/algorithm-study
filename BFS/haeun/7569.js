@@ -13,7 +13,7 @@ const input = () => {
     const boxes = Array.from({ length: H }, () => []);
 
     for (let h = 0; h < H; h++) {
-        boxes[h].push([]);
+        boxes[h] = [];
         for (let l = 0; l < N; l++) {
             boxes[h][l] = input[h * N + l].split(' ').map(Number);
         }
